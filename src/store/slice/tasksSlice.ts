@@ -8,10 +8,15 @@ export const tasksSlice = createSlice({
   initialState,
   reducers: {
     createTask: (state, action: PayloadAction<string>) => {
-      const id = new Date().to;
-      state.push;
+      const id = new Date().getTime();
+      state.push({ title: action.payload, id, status: 'backlog' });
+    },
+    taskToReady: (state, action: PayloadAction<number>) => {
+      const itemId = state.findIndex((el) => el.id === action.payload);
+      state[itemId] = { ...state[itemId], status: 'ready' };
     },
   },
 });
 
 export default tasksSlice.reducer;
+export const { createTask, taskToReady } = tasksSlice.actions;

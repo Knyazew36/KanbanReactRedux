@@ -4,11 +4,11 @@ import RouteApp from './route/Routes';
 
 function App() {
   return (
-    <>
+    <div className='wrapper h-screen flex flex-col justify-between bg-[#0079BF]'>
       <Header />
       <RouteApp />
       <Footer />
-    </>
+    </div>
   );
 }
 

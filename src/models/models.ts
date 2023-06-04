@@ -1,11 +1,7 @@
-export interface IObject {
+export interface ICategory {
   id: number;
   title: string;
   description?: string;
-}
-export interface ICategory {
-  title: string;
-  description: string;
   status: string;
 }
 

@@ -3,9 +3,9 @@ import { RootState } from '../store/store';
 
 const useCategory = (categoryTitle: string) => {
   const data = useSelector((state: RootState) => state.tasks);
-  const newData = data.find((category) => category.title === categoryTitle);
+  const newData = data.filter((el) => el.status === categoryTitle);
 
-  return newData?.categoryItems;
+  return newData;
 };
 
 export default useCategory;

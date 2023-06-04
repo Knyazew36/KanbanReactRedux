@@ -6,7 +6,7 @@ import Ready from '../Ready/Ready';
 
 const Dashboard = () => {
   return (
-    <main className='bg-[#0079BF] py-[25px] px-[19px] h-full grid grid-cols-1 gap-6 lg:grid-cols-4'>
+    <main className=' py-[25px] px-[19px] h-full grid grid-cols-1 gap-6 lg:grid-cols-4'>
       <Backlog />
       <Ready />
       <Progress />
