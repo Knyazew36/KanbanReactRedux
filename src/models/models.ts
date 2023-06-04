@@ -5,7 +5,8 @@ export interface IObject {
 }
 export interface ICategory {
   title: string;
-  categoryItems: IObject[];
+  description: string;
+  status: string;
 }
 
 export interface IButtonProps {
