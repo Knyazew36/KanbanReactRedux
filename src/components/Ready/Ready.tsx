@@ -10,15 +10,6 @@ const Ready = () => {
   const readyData = useCategory('ready');
   const dispatch = useDispatch();
 
-  const handleButtonClick = () => {
-    setButtonActive(true);
-  };
-
-  const handleTaskClick = (id: number) => {
-    dispatch(readyTask(id));
-    setButtonActive(false);
-  };
-
   return (
     <div className='rounded-[10px] bg-[#EBECF0] h-auto p-3 flex justify-between flex-col gap-4 relative'>
       <div>
