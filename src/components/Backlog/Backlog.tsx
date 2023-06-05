@@ -3,6 +3,7 @@ import useCategory from '../../hooks/useCategory';
 import { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { createTask } from '../../store/slice/tasksSlice';
+import { Link } from 'react-router-dom';
 
 const Backlog = () => {
   const [buttonIsActive, setButtonActive] = useState(false);
@@ -36,9 +37,14 @@ const Backlog = () => {
         <ul className='flex flex-col gap-4'>
           {data &&
             data.map((task) => (
-              <li key={task.id} className='text-[18px] bg-white p-2 rounded-md'>
-                {task.title}
-              </li>
+              <Link key={task.id} to={`/task/${task.id}`}>
+                <li
+                  key={task.id}
+                  className='text-[18px] bg-white p-2 rounded-md'
+                >
+                  {task.title}
+                </li>
+              </Link>
             ))}
         </ul>
       </div>

@@ -8,5 +8,5 @@ export interface ICategory {
 export interface IButtonProps {
   handleButtonClick: () => void;
   buttonIsActive: boolean;
-  disable?: () => boolean;
+  isDisabled?: boolean;
 }

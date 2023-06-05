@@ -11,12 +11,21 @@ export const tasksSlice = createSlice({
       const id = new Date().getTime();
       state.push({ title: action.payload, id, status: 'backlog' });
     },
-    taskToReady: (state, action: PayloadAction<number>) => {
-      const itemId = state.findIndex((el) => el.id === action.payload);
-      state[itemId] = { ...state[itemId], status: 'ready' };
+    updateTaskStatus: (
+      state,
+      action: PayloadAction<{
+        id: number;
+        status: 'ready' | 'progress' | 'finished';
+      }>
+    ) => {
+      const { id, status } = action.payload;
+      const taskIndex = state.findIndex((task) => task.id === id);
+      if (taskIndex !== -1) {
+        state[taskIndex].status = status;
+      }
     },
   },
 });
 
 export default tasksSlice.reducer;
-export const { createTask, taskToReady } = tasksSlice.actions;
+export const { createTask, updateTaskStatus } = tasksSlice.actions;
