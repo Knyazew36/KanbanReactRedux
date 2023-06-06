@@ -14,7 +14,7 @@ const Footer = () => {
         </p>
       </div>
       <div>
-        <p className='text-[18px] text-white'>Kanban board by </p>
+        <p className='text-[18px] text-white'>Kanban board 2023</p>
       </div>
     </footer>
   );

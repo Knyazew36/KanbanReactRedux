@@ -26,7 +26,7 @@ const Ready = () => {
   return (
     <div className='rounded-[10px] bg-[#EBECF0] h-auto p-3 flex justify-between flex-col gap-4 relative'>
       <div>
-        <h2 className='text-[18px]'>Ready</h2>
+        <h2 className='text-[18px] font-bold'>Ready</h2>
         <ul className='flex flex-col gap-4'>
           {readyData.map((e) => (
             <Link key={e.id} to={`/task/${e.id}`}>
