@@ -1,7 +1,8 @@
+import React from 'react'
 import { useState } from 'react';
 import Button from '../Button/Button';
 import useCategory from '../../hooks/useCategory';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateTaskStatus } from '../../store/slice/tasksSlice';
 import { Link } from 'react-router-dom';
 import useNotCategory from '../../hooks/useNotCategory';

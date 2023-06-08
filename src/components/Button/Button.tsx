@@ -1,3 +1,4 @@
+import React from 'react'
 import { IButtonProps } from '../../models/models';
 
 const Button: React.FC<IButtonProps> = ({
@@ -5,9 +6,8 @@ const Button: React.FC<IButtonProps> = ({
   buttonIsActive,
   isDisabled,
 }) => {
-  const buttonClass = `flex items-center gap-1 text-[18px] text-button-color ${
-    buttonIsActive ? 'bg-[#0079BF] text-white px-2 rounded-md' : ''
-  }${isDisabled ? '' : ' cursor-pointer'}`;
+  const buttonClass = `flex items-center gap-1 text-[18px] text-button-color ${buttonIsActive ? 'bg-[#0079BF] text-white px-2 rounded-md' : ''
+    }${isDisabled ? '' : ' cursor-pointer'}`;
 
   return (
     <button

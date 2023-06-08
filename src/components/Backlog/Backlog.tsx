@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from '../Button/Button';
 import useCategory from '../../hooks/useCategory';
 import { useState, useRef, useEffect } from 'react';

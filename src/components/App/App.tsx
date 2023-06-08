@@ -1,6 +1,8 @@
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import RouteApp from './route/Routes';
+
+import React from 'react'
+import RouteApp from "../../route/Routes";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 function App() {
   return (

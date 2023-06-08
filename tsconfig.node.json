@@ -3,8 +3,18 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@vitejs/plugin-react": [
+        "./node_modules/@vitejs/plugin-react/dist/index.mjs"
+      ],
+      "vite": [
+        "./node_modules/vite/dist/index.js"
+      ]
+    }
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts"
+  ]
 }
