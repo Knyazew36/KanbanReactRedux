@@ -1,3 +1,4 @@
+import React from 'react';
 import Backlog from '../Backlog/Backlog';
 import Finished from '../Finished/Finished';
 import Progress from '../Progress/Progress';
